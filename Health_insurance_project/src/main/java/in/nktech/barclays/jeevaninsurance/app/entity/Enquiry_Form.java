@@ -26,13 +26,6 @@ public class Enquiry_Form {
 	private String e_name;
 	private Long e_contactNo;
 	private String e_email;
-	
-//	@Temporal(TemporalType.TIMESTAMP)
-//	private Date dt;
-//
-//	@PrePersist
-//	private void onCreate() {
-//		dt = new Date();
-//	}
+	private String formaemail;
 
 }

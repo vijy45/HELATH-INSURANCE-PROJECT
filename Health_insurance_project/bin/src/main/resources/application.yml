@@ -14,17 +14,3 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
     show-sql: true
-    
-    
-    spring:
-  mail:
-    host: smtp.gmail.com
-    password: cbgp gpox aaxg rocb
-    port: 587
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-    username: vijaylpatil45@gmail.com
