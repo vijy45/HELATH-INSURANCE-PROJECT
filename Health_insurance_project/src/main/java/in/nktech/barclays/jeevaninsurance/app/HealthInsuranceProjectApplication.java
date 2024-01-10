@@ -1,4 +1,4 @@
-package com.health.main;
+package in.nktech.barclays.jeevaninsurance.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

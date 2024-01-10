@@ -1,4 +1,4 @@
-package com.health.main.entity;
+package in.nktech.barclays.jeevaninsurance.app.entity;
 
 
 import java.util.Date;
@@ -24,8 +24,6 @@ public class Enquiry_Form {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer e_id;
 	private String e_name;
-	private String e_gender;
-	private String e_age;
 	private Long e_contactNo;
 	private String e_email;
 	

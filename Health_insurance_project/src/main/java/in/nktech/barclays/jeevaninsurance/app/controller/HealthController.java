@@ -1,4 +1,4 @@
-package com.health.main.controller;
+package in.nktech.barclays.jeevaninsurance.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.health.main.entity.Enquiry_Form;
-import com.health.main.service_interface.Health_Service_Interface;
+import in.nktech.barclays.jeevaninsurance.app.entity.Enquiry_Form;
+import in.nktech.barclays.jeevaninsurance.app.service_interface.Health_Service_Interface;
 
 @RestController
 @RequestMapping("/health")
