@@ -10,10 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Insuranceplandetails {
-	@Id
-	private String coverageType;
-	private String coverageStartdate;
-	
-
+public class Premimumcalculation {
+@Id
+	private int age;
+	private String gender;
+    private String coverageType;
 }

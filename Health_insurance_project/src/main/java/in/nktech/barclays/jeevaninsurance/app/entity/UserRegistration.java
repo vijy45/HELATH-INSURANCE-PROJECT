@@ -1,7 +1,23 @@
 package in.nktech.barclays.jeevaninsurance.app.entity;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Transient;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class UserRegistration {
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
 	private String username;
 	private String setpassword;
 	
@@ -12,14 +28,20 @@ public class UserRegistration {
 	private String address;
 	private String pincode;
 	private String emailaddress;
-	private Employementdetails ed;
-	private Insuranceplandetails ipd;
+	@Transient
+	private String formemail;
 	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Employementdetails ed;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Insuranceplandetails ipd;
+	@OneToOne(cascade = CascadeType.ALL)
 	private Healthinformation hi;
-	private Dependentinformation di;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Dependentinformation depedentinfomation;
+	@OneToOne(cascade = CascadeType.ALL)
 	private Additionalinformation addi;
 	
 	
-
-
 }
