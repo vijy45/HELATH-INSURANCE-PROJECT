@@ -86,7 +86,7 @@ public class Health_Service_Impl implements Health_Service_Interface {
 	
 	@Override
 	public double calculatePremium(Premimumcalculation user) {
-        double basePremium = 10000; // Set a base premium amount
+        double basePremium = 10000; 
 
         
         if (user.getAge() > 50) {
@@ -105,6 +105,21 @@ public class Health_Service_Impl implements Health_Service_Interface {
 
         return basePremium;
     }
+
+
+
+	@Override
+	public void updateudaat(int id, UserRegistration ur) {
+      Optional<UserRegistration> us=urr.findById(id);
+      if (us.isPresent()) {
+    	  urr.save(ur);
+		
+	}else 
+      {
+		System.out.println("id not found");
+    	  
+      }
+	}
 }
 
 

@@ -26,4 +26,6 @@ public interface Health_Service_Interface {
 
 	double calculatePremium(Premimumcalculation user);
 
+	void updateudaat(int id, UserRegistration ur);
+
 }
