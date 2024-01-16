@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +21,7 @@ import in.nktech.barclays.jeevaninsurance.app.entity.Enquiry_Form;
 import in.nktech.barclays.jeevaninsurance.app.entity.Premimumcalculation;
 import in.nktech.barclays.jeevaninsurance.app.entity.UserRegistration;
 import in.nktech.barclays.jeevaninsurance.app.service_interface.Health_Service_Interface;
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/health")
 public class HealthController {
@@ -91,6 +92,16 @@ public class HealthController {
 		
 	}
 	
+	@GetMapping("/getuserdata/{username}/{setpassword}")
+	public ResponseEntity<UserRegistration> getuserdata(@PathVariable("username") String username,@PathVariable("setpassword") String setpassword )
+	{
+		
+		UserRegistration udata=hsi.getdatausingusernameandpassword(username,setpassword);
+		System.out.println(udata.getAddress());
+		return new ResponseEntity(udata,HttpStatus.OK);
+		
+	}
+	
 	
 	@PutMapping("/update/{id}")
     public ResponseEntity upatedata(@PathVariable("id") int id, @RequestBody UserRegistration ur)
@@ -107,5 +118,8 @@ public class HealthController {
         double premium = hsi.calculatePremium(user);
         return ResponseEntity.ok(premium);
     }
-}
+	
+
+	
+	}
 

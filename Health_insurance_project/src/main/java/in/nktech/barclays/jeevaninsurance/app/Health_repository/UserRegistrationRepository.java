@@ -9,4 +9,10 @@ import in.nktech.barclays.jeevaninsurance.app.entity.UserRegistration;
 @Repository
 public interface UserRegistrationRepository  extends JpaRepository<UserRegistration,Integer> {
 
+	
+    UserRegistration findByUsernameAndSetpassword(String username, String setpassword);
+
+
+	
+
 }

@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import in.nktech.barclays.jeevaninsurance.app.Health_repository.Health_repository;
 import in.nktech.barclays.jeevaninsurance.app.Health_repository.UserRegistrationRepository;
@@ -82,6 +83,12 @@ public class Health_Service_Impl implements Health_Service_Interface {
 	System.out.println(u.getId());
 	return u;
 	}
+//	@Override
+//	public UserRegistration getdatausingusernameandpassword(String username, String setpassword) {
+//		// TODO Auto-generated method stub
+//		//return urr.findByUsernameAndSetpassword(username,setpassword);
+//	}
+
 	
 	
 	@Override
@@ -120,6 +127,21 @@ public class Health_Service_Impl implements Health_Service_Interface {
     	  
       }
 	}
+
+
+
+	@Override
+	public UserRegistration getdatausingusernameandpassword(String username, String setpassword) {
+		// TODO Auto-generated method stub
+		return urr.findByUsernameAndSetpassword(username, setpassword);
+	}
+
+
+
+	
+
+
+	
 }
 
 

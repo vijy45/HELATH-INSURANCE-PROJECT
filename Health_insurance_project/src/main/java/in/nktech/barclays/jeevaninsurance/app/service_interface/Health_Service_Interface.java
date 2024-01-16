@@ -28,4 +28,10 @@ public interface Health_Service_Interface {
 
 	void updateudaat(int id, UserRegistration ur);
 
+	UserRegistration getdatausingusernameandpassword(String username, String setpassword);
+
+	//UserRegistration getdatausingusernameandpassword(String username, String setpassword);
+
+	
+
 }

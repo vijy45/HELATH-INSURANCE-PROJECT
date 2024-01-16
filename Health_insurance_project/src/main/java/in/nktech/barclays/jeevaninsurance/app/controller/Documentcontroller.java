@@ -3,6 +3,7 @@ package in.nktech.barclays.jeevaninsurance.app.controller;
 
 
 import java.io.IOException;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import in.nktech.barclays.jeevaninsurance.app.entity.UploaduserDocuments;
 import in.nktech.barclays.jeevaninsurance.app.service_interface.DocumentServiceInterface;
 import lombok.extern.slf4j.Slf4j;
+@CrossOrigin("*")
 @Slf4j
 @RestController
 public class Documentcontroller {
