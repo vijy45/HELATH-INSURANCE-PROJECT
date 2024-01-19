@@ -14,6 +14,10 @@ public interface DocumentServiceInterface  {
 
 	String verifyDocument(Long documentId);
 
-	String uploadDocuments(MultipartFile panCard, MultipartFile adharCard, MultipartFile photo, boolean verificationStatus);
+	//String uploadDocuments(int id, MultipartFile panCard, MultipartFile adharCard, MultipartFile photo, boolean verificationStatus);
+
+	void savedocument(UploaduserDocuments ud);
+
+	List getalldocument();
 
 }
