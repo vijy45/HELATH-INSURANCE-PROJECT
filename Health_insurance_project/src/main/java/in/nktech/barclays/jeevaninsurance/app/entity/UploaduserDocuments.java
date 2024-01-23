@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class UploaduserDocuments {
 	@Id
-
+  // @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 	@Lob
 	@Column(length = 65555)
@@ -33,10 +33,6 @@ public class UploaduserDocuments {
 
     private boolean verificationStatus;
     private String status;
-	public UploaduserDocuments orElse(Object object) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 
 }

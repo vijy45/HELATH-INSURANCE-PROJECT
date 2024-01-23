@@ -91,5 +91,11 @@ public List getalldocument() {
 	// TODO Auto-generated method stub
 	return documentRepository.findAll();
 }
+@Override
+public UploaduserDocuments getdocbyid(long id) {
+	// TODO Auto-generated method stub
+	return documentRepository.findById(id);
+	
+}
 
 }

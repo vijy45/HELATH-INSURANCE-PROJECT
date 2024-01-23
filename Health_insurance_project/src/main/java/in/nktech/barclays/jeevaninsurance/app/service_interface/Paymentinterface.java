@@ -6,4 +6,6 @@ public interface Paymentinterface {
 
 	void savepayment(Payment pay);
 
+	Payment getpaybyid(Long id);
+
 }

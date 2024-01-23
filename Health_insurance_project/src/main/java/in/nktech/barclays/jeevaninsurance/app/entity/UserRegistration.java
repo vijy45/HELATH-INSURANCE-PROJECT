@@ -29,7 +29,7 @@ public class UserRegistration {
 	private String pincode;
 	private String emailaddress;
 	@Transient
-	private String formemail;
+	private String formemaill;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	private Employementdetails ed;
@@ -42,6 +42,6 @@ public class UserRegistration {
 	private Dependentinformation depedentinfomation;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Additionalinformation addi;
-	
+    
 	
 }

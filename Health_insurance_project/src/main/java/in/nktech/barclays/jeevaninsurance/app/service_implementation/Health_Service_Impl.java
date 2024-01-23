@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import in.nktech.barclays.jeevaninsurance.app.Health_repository.Health_repository;
 import in.nktech.barclays.jeevaninsurance.app.Health_repository.UserRegistrationRepository;
+import in.nktech.barclays.jeevaninsurance.app.emailutil.EmailSendRegister;
 import in.nktech.barclays.jeevaninsurance.app.emailutil.Emailsenderutil;
 import in.nktech.barclays.jeevaninsurance.app.entity.Enquiry_Form;
 import in.nktech.barclays.jeevaninsurance.app.entity.Premimumcalculation;
@@ -19,6 +20,9 @@ public class Health_Service_Impl implements Health_Service_Interface {
 @Autowired Health_repository hr;
 @Autowired Emailsenderutil eu;
 @Autowired UserRegistrationRepository urr;
+
+@Autowired
+EmailSendRegister esr;
 	
 
 	@Override
@@ -134,6 +138,15 @@ public class Health_Service_Impl implements Health_Service_Interface {
 	public UserRegistration getdatausingusernameandpassword(String username, String setpassword) {
 		// TODO Auto-generated method stub
 		return urr.findByUsernameAndSetpassword(username, setpassword);
+	}
+
+
+
+	@Override
+	public void sendmail(UserRegistration ur) {
+		
+		esr.sendmailRegister(ur);
+		
 	}
 
 

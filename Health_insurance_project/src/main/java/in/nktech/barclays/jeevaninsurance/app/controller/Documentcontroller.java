@@ -67,4 +67,10 @@ public class Documentcontroller {
 	    	List ud =documentService.getalldocument();
 	    	return new ResponseEntity(ud,HttpStatus.OK);
 	    }
+	    @GetMapping("get/{id}")
+	    public ResponseEntity<UploaduserDocuments> getdocumentbyid(@PathVariable long id)
+	    {
+	    	UploaduserDocuments uud=documentService.getdocbyid(id);	
+	    	return new ResponseEntity<UploaduserDocuments>(uud,HttpStatus.OK); 
+	    }
 }

@@ -32,6 +32,9 @@ public class HealthController {
 	("{$spring.mail.username}")
 	String formemail;
 	
+	@Value
+	("{$spring.mail.username}")
+	String formemaill;
 	
 	
 	@PostMapping("/saveE")
@@ -61,6 +64,8 @@ public class HealthController {
 	{
 		
 		hsi.saveRegistrationdata(ur);
+		ur.setFormemaill(formemaill);
+		hsi.sendmail(ur);
 		return new ResponseEntity (HttpStatus.CREATED);
 		
 	}

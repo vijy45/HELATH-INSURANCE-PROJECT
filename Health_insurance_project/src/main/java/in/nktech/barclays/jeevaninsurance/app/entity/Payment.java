@@ -14,15 +14,17 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Payment {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private double amount;
     
     private String methodofPayment;
+    private Long cardno;
+    private String dateofpayment;
     
-    @ManyToOne
-    private UserRegistration user;
-    @ManyToOne
-    private Insuranceplandetails policy;
+//    
+//    @ManyToOne
+//    private UserRegistration user;
+//    @ManyToOne
+//    private Insuranceplandetails policy;
     // other fields, getters, and setters
 }

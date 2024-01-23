@@ -30,6 +30,8 @@ public interface Health_Service_Interface {
 
 	UserRegistration getdatausingusernameandpassword(String username, String setpassword);
 
+	void sendmail(UserRegistration ur);
+
 	//UserRegistration getdatausingusernameandpassword(String username, String setpassword);
 
 	

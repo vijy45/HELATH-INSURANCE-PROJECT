@@ -25,8 +25,9 @@ public class PaymentImpl implements Paymentinterface {
 	for(UserRegistration user1:user)
 	{
 		useid=user1.getId();
-	}
-		
+		System.out.println(user1.getId());
+	
+		System.out.println();
      if (pay.getId().equals(useid)) {
     	 pr.save(pay);
 		
@@ -34,7 +35,14 @@ public class PaymentImpl implements Paymentinterface {
      else {
 		System.out.println("id not present");
 	}
+	}
 	
+	}
+	@Override
+	public Payment getpaybyid(Long id) {
+		// TODO Auto-generated method stub
+		Payment pay=pr.findById(id).get();
+		return pay ;
 	}
 	
 	
